@@ -3,6 +3,10 @@ package com.example.vendaspoint.model;
 public class Produto {
     private String nomeProduto;
     private int codigo;
+    private String descricao;
+    private double valor;
+
+
 
     public String getNomeProduto() {
         return nomeProduto;
@@ -35,8 +39,4 @@ public class Produto {
     public void setValor(double valor) {
         this.valor = valor;
     }
-
-    private String descricao;
-    private double valor;
-
 }

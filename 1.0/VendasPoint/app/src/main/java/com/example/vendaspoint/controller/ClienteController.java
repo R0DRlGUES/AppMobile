@@ -9,38 +9,6 @@ import com.example.vendaspoint.model.Cliente;
 import java.util.ArrayList;
 
 public class ClienteController {
-    /**
-    private Context context;
-    public ClienteController (Context context){
-        this.context = context;
-    }
-    public String registroCliente(String nome, String cpf) {
-        try {
-            if(nome.equals("") || nome.isEmpty()){
-                return "É necessário inserir um nome para continuar.";
-            }
-            if(cpf.equals("") || cpf.isEmpty()){
-                return "É necessário inserir um CPF para continuar.";
-            }
-            Cliente cliente = new Cliente.getInstance(context).g
-            if (cliente != null){
-                return "Cliente já cadastrato";
-            }else{
-                cliente = new Cliente();
-                cliente.setNome(nome);
-                cliente.setCpf(cpf);
-            }
-        }catch (Exception ex){
-            return "Erro ao Registrar Cliente";
-
-        }
-        return null;
-
-    }
-    public ArrayList<Cliente> retornarRegistroCliente(){
-        return Cliente.getInstance
-    }
-**/
     private Context context;
 
     public ClienteController (Context context){
