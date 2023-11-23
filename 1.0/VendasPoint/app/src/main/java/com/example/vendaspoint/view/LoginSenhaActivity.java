@@ -1,8 +1,8 @@
 package com.example.vendaspoint.view;
 
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -11,7 +11,6 @@ import android.widget.Toast;
 
 import com.example.vendaspoint.R;
 import com.example.vendaspoint.controller.LoginSenhaController;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class LoginSenhaActivity extends AppCompatActivity {
 
@@ -24,20 +23,28 @@ public class LoginSenhaActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login_senha);
 
-        controller = new LoginSenhaController(this);
+        Button btnLogin = findViewById(R.id.btnLogin);
 
+        // Defina o ouvinte de clique para chamar a função de login
+        btnLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                RealizarLogin();
+            }
+        });
 
     }
 
+    public void onClick(DialogInterface dialogInterface, int i) {
+
+    }
     private void RealizarLogin() {
         editTextSenha = findViewById(R.id.editTextSenha);
         editTextLogin = findViewById(R.id.editTextLogin);
         btnLogin = findViewById(R.id.btnLogin);
 
         validaLogin(editTextSenha, editTextLogin);
-
     }
 
     private void validaLogin(EditText editTextSenha, EditText editTextLogin) {
