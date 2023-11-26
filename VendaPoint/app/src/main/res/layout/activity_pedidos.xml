@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#140E2C"
+    android:layout_height="match_parent"
+    tools:context=".view.PedidosActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:elevation="20dp"
+        android:radius="16dp"
+        android:layout_margin="10dp">
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Relatório de Vendas"
+            android:textColor="@color/white"
+            android:textAlignment="center"/>
+
+    </LinearLayout>
+
+
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/lnTitulo"
+        android:orientation="horizontal"
+        android:elevation="20dp"
+        android:radius="16dp"
+        android:layout_margin="10dp"
+        >
+
+
+        <TextView
+            android:layout_width="10dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Cliente"
+            android:textColor="@color/white"
+            android:layout_marginTop="30dp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:text="Itens"
+            android:layout_marginTop="30dp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:text="Quantidade"
+            android:layout_marginTop="30dp"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:orientation="horizontal"
+        android:id="@+id/lnLine"
+
+        android:layout_below="@+id/lnTitulo"
+        android:background="@android:color/darker_gray"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvPedidos"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/lnLine"
+        android:layout_marginTop="0dp"
+        android:background="#FFFFFF" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btCadastrar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:backgroundTint="#140E2C"
+        android:tint="@android:color/white"
+        app:srcCompat="@android:drawable/ic_menu_add"
+
+    />
+
+
+</RelativeLayout>

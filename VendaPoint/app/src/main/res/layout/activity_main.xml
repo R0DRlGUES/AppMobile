@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="#140E2C"
+android:padding="16dp">
+
+<EditText
+    android:id="@+id/editVendasPoint"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    android:layout_marginTop="100dp"
+    android:background="@android:color/transparent"
+    android:enabled="false"
+    android:gravity="center"
+    android:text="Vendas Point"
+    android:textColor="#FFFFFF"
+    android:textSize="24sp"
+    android:textStyle="bold" />
+
+<androidx.cardview.widget.CardView
+    android:id="@+id/cardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true"
+    android:elevation="20dp"
+    android:radius="16dp"
+    app:cardCornerRadius="16dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#00FFFFFF"
+        android:padding="16dp">
+
+        <Button
+            android:id="@+id/btCadastrarLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Cadastrar"
+            android:textAlignment="center" />
+
+        <Button
+            android:id="@+id/btLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:layout_weight="1"
+            android:text="Login"
+            android:textAlignment="center" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
+
+</RelativeLayout>
