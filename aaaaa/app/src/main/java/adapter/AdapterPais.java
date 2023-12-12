@@ -34,7 +34,7 @@ public class AdapterPais extends RecyclerView.Adapter<AdapterPais.ViewHolder> {
     public void onBindViewHolder(ViewHolder holder, int position) {
         Pais pais = listaPaises.get(position);
 
-        holder.tvCodigo.setText(pais.getCodio());
+        holder.tvCodigo.setText(String.valueOf(pais.getCodio()));
         holder.tvDescricao.setText(pais.getDescricao());
     }
 
@@ -44,7 +44,7 @@ public class AdapterPais extends RecyclerView.Adapter<AdapterPais.ViewHolder> {
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        TextView tvCodigo, tvDescricao;
+        private TextView tvCodigo, tvDescricao;
 
         public ViewHolder(View itemView) {
             super(itemView);

@@ -15,4 +15,11 @@
         android:onClick="onSearchButtonClick"
         android:text="Buscar" />
 
+    <Button
+        android:id="@+id/botaoAbrirLista"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onSearchButtonClick"
+        android:text="Abrir Lista" />
+
 </RelativeLayout>

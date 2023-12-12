@@ -14,8 +14,8 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 public class PaisController {
-    private Context context;
-    public static void getViaPais(int codigo, String descricao,TextView tvListaPais){
+    private static Context context;
+    public static void getViaPais(Context context){
         try{
             retrofit2.Call<ArrayList <PaisDTO>> call = new RetrofitConfig().paisService().getPaisDtoCall();
             call.enqueue(new Callback<ArrayList<PaisDTO>>() {
@@ -24,7 +24,9 @@ public class PaisController {
                     ArrayList<PaisDTO> listaPais = response.body();
 
                     for (int i = 0 ; i <listaPais.size(); i++){
-                        salvar();
+                        PaisDTO pais = listaPais.get(i);
+
+                        salvar(pais.getCodigo(), pais.getDescricao(),context);
 
                     }
                 }
@@ -34,7 +36,7 @@ public class PaisController {
             });
         }catch (Exception ex){}
     }
-    public String salvar(int codigo, String descricao){
+    public static String salvar(int codigo, String descricao, Context context){
         try {
             Pais pais = new Pais();
             pais.setCodio(codigo);
@@ -45,12 +47,14 @@ public class PaisController {
         }
         return null;
     }
-    public void retornar(){
-        ArrayList<PaisDTO> listaPais;
-        for (int i = 0 ; i <listaPais.size(); i++){
-
-        }
+    public static ArrayList<Pais> retornar(Context context){
+        return PaisDao.getInstancia(context).getAll();
+    }
+//    public void retornar(int codigo, String descricao, Context context){
+//        ArrayList<PaisDTO> listaPais;
+//        PaisDTO pais = listaPais.get(i);
+//        for (int i = 0 ; i <listaPais.size(); i++){
+//
+//        }
 
     }
-
-}
