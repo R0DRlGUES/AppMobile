@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:background="#140E2C"
     android:layout_height="match_parent"
-    tools:context=".view.PedidosActivity">
+    >
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -28,7 +25,7 @@
     </LinearLayout>
 
 
-        <LinearLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/lnTitulo"
@@ -68,26 +65,12 @@
         android:background="@android:color/darker_gray"/>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvPedidos"
+        android:id="@+id/rvPais"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/lnLine"
         android:layout_marginTop="0dp"
         android:background="#FFFFFF" />
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/btCadastrar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="20dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:backgroundTint="#140E2C"
-        android:tint="@android:color/white"
-        app:srcCompat="@android:drawable/ic_menu_add"
-
-    />
 
 
 </RelativeLayout>
